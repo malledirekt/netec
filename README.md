@@ -21,7 +21,8 @@ npm run preview  # Build + lokaler Worker (wrangler dev)
 ## Struktur
 
 - `public/index.html` – Startseite (Spanisch)
-- `public/img/` – Hero-Illustration (`hero-ventana.svg`), Favicon
+- `public/img/` – Hero-Fallback-Foto, Favicon
+- `public/js/hero-video.js` – Hero-Hintergrundvideo (YouTube, Ausschnitt 00:27–00:49, abgedunkelt; ab 768px, sonst Foto)
 - `public/fonts/` – Fraunces + Inter, selbst gehostet (SIL OFL, keine Google-Fonts-Anfrage → DSGVO)
 - `public/js/contact-form.js` – Kontaktformular
 

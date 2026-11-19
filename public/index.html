@@ -8,6 +8,7 @@
     <meta name="theme-color" content="#7ab51d" />
     <link rel="preload" href="/fonts/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/img/hero-fallback.webp" as="image" />
     <link rel="stylesheet" href="/styles.css" />
     <link rel="icon" href="/img/favicon.svg" type="image/svg+xml" />
     <meta property="og:title" content="Netec Mosquiteras · Simplemente vivir mejor" />
@@ -64,16 +65,26 @@
     </header>
 
     <main id="contenido">
-      <!-- ================= Hero ================= -->
-      <section class="relative overflow-hidden">
-        <div class="mesh pointer-events-none absolute inset-y-0 right-0 hidden w-1/2 text-netec-500/[0.07] lg:block" aria-hidden="true"></div>
-        <div class="relative mx-auto grid max-w-7xl items-center gap-12 px-5 pt-12 pb-16 lg:grid-cols-12 lg:gap-8 lg:px-8 lg:pt-20 lg:pb-24">
-          <div class="lg:col-span-6">
-            <p class="eyebrow"><span class="h-px w-8 bg-netec-500"></span>Mosquiteras a medida · Mallorca</p>
-            <h1 class="mt-6 font-display text-5xl leading-[1.02] font-medium tracking-tight text-balance text-ink sm:text-6xl xl:text-7xl">
-              Simplemente <em class="font-normal text-netec-600">vivir</em> mejor.
+      <!-- ================= Hero (Video, abgedunkelt; Foto als Fallback) ================= -->
+      <section class="relative isolate flex min-h-[calc(100svh-4.5rem)] items-end overflow-hidden bg-ink text-white lg:items-center">
+        <!-- Fallback-Foto: wird immer zuerst gezeigt (Handy, reduzierte Bewegung, Video lädt nicht) -->
+        <img src="/img/hero-fallback.webp" alt="" class="absolute inset-0 -z-20 size-full object-cover object-[70%_center]" width="1420" height="950" fetchpriority="high" />
+        <!-- Video-Hintergrund (YouTube 00:27–00:49), wird per /js/hero-video.js geladen -->
+        <div id="hero-video" class="pointer-events-none absolute inset-0 -z-10 overflow-hidden opacity-0 transition-opacity duration-1000" data-youtube-id="omaBrFtyxyY" data-start="27" data-end="49" aria-hidden="true">
+          <div class="absolute top-1/2 left-1/2 h-[max(100%,56.25vw)] w-[max(100%,177.78svh)] -translate-x-1/2 -translate-y-1/2 scale-[1.18]">
+            <div id="hero-video-player" class="size-full"></div>
+          </div>
+        </div>
+        <!-- Abdunklung -->
+        <div class="absolute inset-0 -z-10 bg-gradient-to-t from-ink/90 via-ink/55 to-ink/35 lg:bg-gradient-to-r lg:from-ink/85 lg:via-ink/55 lg:to-ink/20" aria-hidden="true"></div>
+
+        <div class="mx-auto w-full max-w-7xl px-5 pt-32 pb-14 lg:px-8 lg:py-24">
+          <div class="max-w-2xl">
+            <p class="eyebrow text-netec-300"><span class="h-px w-8 bg-netec-400"></span>Mosquiteras a medida · Mallorca</p>
+            <h1 class="mt-6 font-display text-5xl leading-[1.02] font-medium tracking-tight text-balance sm:text-6xl xl:text-7xl">
+              Simplemente <em class="font-normal text-netec-400">vivir</em> mejor.
             </h1>
-            <p class="mt-6 max-w-xl text-lg leading-relaxed text-stone">
+            <p class="mt-6 max-w-xl text-lg leading-relaxed text-white/80">
               Abra las ventanas, deje entrar la brisa del Mediterráneo y deje fuera a los mosquitos.
               Fabricamos cada mosquitera a la medida exacta de su hogar, con más de 300 variantes.
             </p>
@@ -82,37 +93,23 @@
                 Pedir presupuesto gratis
                 <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
               </a>
-              <a href="/mosquiteras/" class="btn btn-ghost px-7 py-3.5 text-base">Ver mosquiteras</a>
+              <a href="/mosquiteras/" class="btn border border-white/30 bg-white/10 px-7 py-3.5 text-base text-white backdrop-blur hover:bg-white/20">Ver mosquiteras</a>
             </div>
 
-            <dl class="mt-12 grid max-w-lg grid-cols-3 gap-6 border-t border-line pt-8">
+            <dl class="mt-12 grid max-w-lg grid-cols-3 gap-6 border-t border-white/20 pt-8">
               <div>
-                <dt class="text-xs font-medium text-stone">Variantes</dt>
-                <dd class="mt-1 font-display text-3xl font-medium text-ink">300+</dd>
+                <dt class="text-xs font-medium text-white/60">Variantes</dt>
+                <dd class="mt-1 font-display text-3xl font-medium">300+</dd>
               </div>
               <div>
-                <dt class="text-xs font-medium text-stone">Fabricación</dt>
-                <dd class="mt-1 font-display text-3xl font-medium text-ink">100%<span class="block text-sm font-sans font-medium text-stone">a medida</span></dd>
+                <dt class="text-xs font-medium text-white/60">Fabricación</dt>
+                <dd class="mt-1 font-display text-3xl font-medium">100%<span class="block font-sans text-sm font-medium text-white/60">a medida</span></dd>
               </div>
               <div>
-                <dt class="text-xs font-medium text-stone">Distribuidor</dt>
-                <dd class="mt-1 font-display text-3xl font-medium text-ink">Neher<span class="block text-sm font-sans font-medium text-stone">especializado</span></dd>
+                <dt class="text-xs font-medium text-white/60">Distribuidor</dt>
+                <dd class="mt-1 font-display text-3xl font-medium">Neher<span class="block font-sans text-sm font-medium text-white/60">especializado</span></dd>
               </div>
             </dl>
-          </div>
-
-          <div class="relative lg:col-span-6">
-            <div class="relative mx-auto max-w-xl">
-              <div class="absolute -inset-4 -rotate-2 rounded-[2.5rem] bg-netec-100" aria-hidden="true"></div>
-              <img src="/img/hero-ventana.svg" alt="Ventana abierta al mar con una mosquitera plisada que deja fuera a un mosquito" class="relative w-full rounded-[2rem] shadow-2xl shadow-netec-900/15" width="780" height="850" />
-              <!-- Floating note -->
-              <div class="absolute -bottom-6 left-3 flex max-w-[15rem] items-start gap-3 rounded-2xl border border-line bg-white p-4 shadow-xl sm:-left-10">
-                <span class="mt-0.5 grid size-9 shrink-0 place-items-center rounded-full bg-netec-500 text-ink">
-                  <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>
-                </span>
-                <p class="text-sm leading-snug"><strong class="font-semibold">Medición en su casa</strong><br /><span class="text-stone">Le asesoramos in situ, sin compromiso.</span></p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -488,6 +485,7 @@
       </div>
     </footer>
 
+    <script src="/js/hero-video.js" defer></script>
     <script src="/js/contact-form.js" defer></script>
   </body>
 </html>
