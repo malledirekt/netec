@@ -1,2 +1,86 @@
 @import "tailwindcss";
 @source "../public";
+
+/* ---------- Fonts (self-hosted, SIL OFL) ---------- */
+@font-face {
+  font-family: "Fraunces";
+  src: url("/fonts/fraunces-latin-wght-normal.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("/fonts/fraunces-latin-wght-italic.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/inter-latin-wght-normal.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ---------- Netec design tokens ---------- */
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+
+  /* Netec-Grün aus dem Original-Logo (#7AB51D) */
+  --color-netec-50: #f5f9ec;
+  --color-netec-100: #e8f2d3;
+  --color-netec-200: #d2e6a8;
+  --color-netec-300: #b2d46f;
+  --color-netec-400: #94c33f;
+  --color-netec-500: #7ab51d;
+  --color-netec-600: #5f9113;
+  --color-netec-700: #496f14;
+  --color-netec-800: #3b5816;
+  --color-netec-900: #324a17;
+
+  /* Grautöne wie im Original (#666 Text, dunkles Graphit) */
+  --color-ink: #23272b;
+  --color-stone: #5f6368;
+  --color-sand: #f7f6f1;
+  --color-line: #e4e3dc;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-sand font-sans text-ink antialiased;
+  }
+  ::selection {
+    @apply bg-netec-200 text-ink;
+  }
+}
+
+@layer components {
+  /* Feines Gewebe-Raster als wiederkehrendes Motiv */
+  .mesh {
+    background-image:
+      linear-gradient(to right, currentColor 1px, transparent 1px),
+      linear-gradient(to bottom, currentColor 1px, transparent 1px);
+    background-size: 7px 7px;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-netec-600;
+  }
+  .btn-primary {
+    @apply bg-netec-500 text-ink shadow-sm shadow-netec-700/20 hover:bg-netec-400;
+  }
+  .btn-ghost {
+    @apply border border-ink/15 bg-white/60 text-ink hover:border-ink/40 hover:bg-white;
+  }
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold tracking-[0.18em] text-netec-700 uppercase;
+  }
+  .field {
+    @apply block w-full rounded-xl border border-line bg-white px-4 py-3 text-sm text-ink placeholder:text-stone/60 focus:border-netec-500 focus:ring-4 focus:ring-netec-500/15 focus:outline-none;
+  }
+}
