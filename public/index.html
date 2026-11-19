@@ -22,14 +22,8 @@
     <header class="sticky top-0 z-40 border-b border-line/70 bg-sand/85 backdrop-blur">
       <div class="mx-auto flex h-18 max-w-7xl items-center justify-between gap-6 px-5 lg:px-8">
         <a href="/" class="group flex items-center gap-3" aria-label="Netec Mosquiteras, inicio">
-          <!-- Wortmarke (bis das Original-Logo als Datei vorliegt) -->
-          <span class="relative inline-flex items-baseline">
-            <svg class="absolute -top-2 -left-2 h-8 w-[6.25rem] text-netec-500" viewBox="0 0 120 36" fill="none" aria-hidden="true">
-              <path d="M4 26C24 6 86 2 116 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-            </svg>
-            <span class="relative text-2xl font-black tracking-tight text-netec-500 italic">NETEC</span>
-          </span>
-          <span class="ml-2 hidden border-l border-line pl-3 text-[11px] leading-tight font-medium tracking-wide text-stone uppercase sm:block">Mosquiteras<br />Mallorca</span>
+          <img src="/img/logo-netec.png" alt="Netec" width="360" height="166" class="h-9 w-auto" />
+          <span class="hidden border-l border-line pl-3 text-[11px] leading-tight font-medium tracking-wide text-stone uppercase sm:block">Mosquiteras<br />Mallorca</span>
         </a>
 
         <nav aria-label="Principal" class="hidden items-center gap-8 text-sm font-medium lg:flex">
@@ -124,6 +118,7 @@
                 <h2 class="mt-4 font-display text-4xl leading-tight font-medium tracking-tight text-balance sm:text-5xl">Para cada ventana, puerta y tragaluz.</h2>
                 <p class="mt-5 text-stone">Versátiles, discretas y de larga duración. Le ayudamos a elegir el sistema que mejor se adapta a su vivienda y a su forma de vivir.</p>
                 <a href="/mosquiteras/" class="btn btn-ghost mt-8">Ver todos los modelos</a>
+                <img src="/img/fotos/terraza.webp" alt="Pareja desayunando en la terraza junto a una ventana con mosquitera" class="mt-10 hidden aspect-[4/3] w-full rounded-3xl object-cover lg:block" width="1200" height="800" loading="lazy" />
               </div>
             </div>
 
@@ -194,29 +189,37 @@
                   <svg class="size-5 text-netec-600 transition group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
                 </a>
               </li>
-              <li>
-                <a href="/mosquiteras/#techo" class="group grid grid-cols-[3rem_1fr_auto] items-center gap-4 py-6 sm:grid-cols-[4rem_1fr_14rem_auto]">
-                  <span class="font-display text-sm text-stone italic">07</span>
-                  <span>
-                    <span class="block text-xl font-semibold transition group-hover:text-netec-700">Ventanas de techo y tragaluces</span>
-                    <span class="mt-1 block text-sm text-stone">Mosquiteras para ventanas de tejado y cubiertas para tragaluces.</span>
-                  </span>
-                  <span class="hidden text-xs font-medium tracking-wide text-stone uppercase sm:block">Techo</span>
-                  <svg class="size-5 text-netec-600 transition group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-                </a>
-              </li>
-              <li>
-                <a href="/mosquiteras/#especiales" class="group grid grid-cols-[3rem_1fr_auto] items-center gap-4 py-6 sm:grid-cols-[4rem_1fr_14rem_auto]">
-                  <span class="font-display text-sm text-stone italic">08</span>
-                  <span>
-                    <span class="block text-xl font-semibold transition group-hover:text-netec-700">Soluciones especiales</span>
-                    <span class="mt-1 block text-sm text-stone">Formas, tamaños o situaciones poco habituales: lo resolvemos.</span>
-                  </span>
-                  <span class="hidden text-xs font-medium tracking-wide text-stone uppercase sm:block">A medida</span>
-                  <svg class="size-5 text-netec-600 transition group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-                </a>
-              </li>
             </ol>
+            <!-- Fotos von der alten Startseite -->
+            <div class="grid gap-5 sm:grid-cols-3 lg:col-span-8 lg:col-start-5">
+              <a href="/mosquiteras/#techo" class="group relative block aspect-[4/5] overflow-hidden rounded-3xl bg-ink">
+                <img src="/img/fotos/ventana-techo.webp" alt="Hombre abriendo una ventana de techo con mosquitera" class="absolute inset-0 size-full object-cover transition duration-700 group-hover:scale-105" width="1200" height="800" loading="lazy" />
+                <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/25 to-transparent"></div>
+                <div class="absolute inset-x-0 bottom-0 p-6 text-white">
+                  <span class="font-display text-sm text-netec-300 italic">07</span>
+                  <h3 class="mt-1 text-xl font-semibold">Ventanas de techo</h3>
+                  <p class="mt-1 text-sm text-white/75">Protección para ventanas de tejado.</p>
+                </div>
+              </a>
+              <a href="/mosquiteras/#tragaluces" class="group relative block aspect-[4/5] overflow-hidden rounded-3xl bg-ink">
+                <img src="/img/fotos/tragaluz.webp" alt="Cubierta para tragaluz sobre el césped" class="absolute inset-0 size-full object-cover transition duration-700 group-hover:scale-105" width="1200" height="800" loading="lazy" />
+                <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/25 to-transparent"></div>
+                <div class="absolute inset-x-0 bottom-0 p-6 text-white">
+                  <span class="font-display text-sm text-netec-300 italic">08</span>
+                  <h3 class="mt-1 text-xl font-semibold">Cubiertas tragaluces</h3>
+                  <p class="mt-1 text-sm text-white/75">Contra hojas, insectos y pequeños animales.</p>
+                </div>
+              </a>
+              <a href="/mosquiteras/#especiales" class="group relative block aspect-[4/5] overflow-hidden rounded-3xl bg-ink">
+                <img src="/img/fotos/gato.webp" alt="Gato pasando por una gatera integrada en la mosquitera" class="absolute inset-0 size-full object-cover transition duration-700 group-hover:scale-105" width="1200" height="800" loading="lazy" />
+                <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/25 to-transparent"></div>
+                <div class="absolute inset-x-0 bottom-0 p-6 text-white">
+                  <span class="font-display text-sm text-netec-300 italic">09</span>
+                  <h3 class="mt-1 text-xl font-semibold">Soluciones especiales</h3>
+                  <p class="mt-1 text-sm text-white/75">Gateras, formas especiales y más.</p>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -232,6 +235,11 @@
             </div>
             <a href="/tipos-de-tejido/" class="btn btn-ghost">Ver los 9 tejidos</a>
           </div>
+
+          <figure class="relative mt-12 overflow-hidden rounded-[2rem]">
+            <img src="/img/fotos/perro.webp" alt="Perro en una puerta de terraza abierta con mosquitera plisada" class="aspect-[16/9] w-full object-cover sm:aspect-[21/9]" width="1400" height="747" loading="lazy" />
+            <figcaption class="absolute bottom-4 left-4 rounded-full bg-white/90 px-4 py-2 text-sm font-medium backdrop-blur">Aire fresco para todos, también para los de cuatro patas.</figcaption>
+          </figure>
 
           <div class="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             <a href="/tipos-de-tejido/#transpatec" class="group overflow-hidden rounded-3xl border border-line bg-white transition hover:-translate-y-1 hover:shadow-xl hover:shadow-netec-900/10">
@@ -279,29 +287,31 @@
       </section>
 
       <!-- ================= Así trabajamos ================= -->
-      <section id="proceso" class="bg-ink text-white">
-        <div class="mx-auto max-w-7xl px-5 py-20 lg:px-8 lg:py-28">
+      <section id="proceso" class="relative isolate overflow-hidden bg-ink text-white">
+        <img src="/img/fotos/mosquito.webp" alt="" class="absolute inset-0 -z-10 size-full object-cover opacity-50" width="1095" height="611" loading="lazy" />
+        <div class="absolute inset-0 -z-10 bg-gradient-to-b from-ink/40 via-ink/70 to-ink" aria-hidden="true"></div>
+        <div class="relative mx-auto max-w-7xl px-5 py-20 lg:px-8 lg:py-28">
           <div class="max-w-2xl">
             <p class="eyebrow text-netec-300">Así trabajamos</p>
             <h2 class="mt-4 font-display text-4xl leading-tight font-medium tracking-tight text-balance sm:text-5xl">De la primera llamada a una casa sin mosquitos.</h2>
           </div>
           <ol class="mt-14 grid gap-px overflow-hidden rounded-3xl bg-white/10 sm:grid-cols-2 lg:grid-cols-4">
-            <li class="bg-ink p-8">
+            <li class="bg-ink/75 p-8 backdrop-blur-sm">
               <span class="font-display text-5xl text-netec-400 italic">1</span>
               <h3 class="mt-6 text-lg font-semibold">Contacto</h3>
               <p class="mt-2 text-sm leading-relaxed text-white/65">Llámenos o escríbanos y cuéntenos qué ventanas y puertas quiere proteger.</p>
             </li>
-            <li class="bg-ink p-8">
+            <li class="bg-ink/75 p-8 backdrop-blur-sm">
               <span class="font-display text-5xl text-netec-400 italic">2</span>
               <h3 class="mt-6 text-lg font-semibold">Asesoramiento y medición</h3>
               <p class="mt-2 text-sm leading-relaxed text-white/65">Le visitamos, tomamos medidas y le recomendamos el sistema y el tejido adecuados.</p>
             </li>
-            <li class="bg-ink p-8">
+            <li class="bg-ink/75 p-8 backdrop-blur-sm">
               <span class="font-display text-5xl text-netec-400 italic">3</span>
               <h3 class="mt-6 text-lg font-semibold">Fabricación a medida</h3>
               <p class="mt-2 text-sm leading-relaxed text-white/65">Cada mosquitera se fabrica exactamente para su ventana o puerta.</p>
             </li>
-            <li class="bg-ink p-8">
+            <li class="bg-ink/75 p-8 backdrop-blur-sm">
               <span class="font-display text-5xl text-netec-400 italic">4</span>
               <h3 class="mt-6 text-lg font-semibold">Instalación limpia</h3>
               <p class="mt-2 text-sm leading-relaxed text-white/65">Montaje limpio y preciso. Y seguimos a su lado después, también para reparaciones.</p>
@@ -441,7 +451,7 @@
     <footer class="bg-ink text-white/70">
       <div class="mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:grid-cols-2 lg:grid-cols-4 lg:px-8">
         <div>
-          <span class="text-2xl font-black tracking-tight text-netec-400 italic">NETEC</span>
+          <img src="/img/logo-netec-weiss.png" alt="Netec" width="360" height="166" class="h-9 w-auto opacity-90" loading="lazy" />
           <p class="mt-4 text-sm leading-relaxed">Mosquiteras a medida en Mallorca. Simplemente vivir mejor.</p>
           <a href="https://www.facebook.com/netecmosquitera/" class="mt-5 inline-flex items-center gap-2 text-sm font-medium text-white hover:text-netec-300" rel="noopener">
             <svg class="size-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8h3V4h-3c-2.8 0-4 1.7-4 4.3V10H7v4h3v8h4v-8h3l1-4h-4V8.6c0-.4.3-.6.6-.6Z"/></svg>
