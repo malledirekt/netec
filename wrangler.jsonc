@@ -4,5 +4,11 @@
   "compatibility_date": "2026-11-01",
   "assets": {
     "directory": "./public"
-  }
+  },
+  // Tailwind vor jedem Deploy/Preview bauen (auch wenn Cloudflare keinen Build-Befehl setzt)
+  "build": {
+    "command": "npm run build"
+  },
+  // Nötig für `npx wrangler preview` (Builds auf Nicht-Main-Branches)
+  "previews": {}
 }
