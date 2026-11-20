@@ -23,7 +23,7 @@
   var id = wrap.getAttribute("data-youtube-id");
   var start = parseFloat(wrap.getAttribute("data-start")) || 0;
   var end = parseFloat(wrap.getAttribute("data-end")) || 0;
-  var DELAY_MS = 3000; // erst 3 Sekunden nur das Foto zeigen
+  var DELAY_MS = 2000; // erst 2 Sekunden nur das Foto zeigen
   var t0 = Date.now();
   var player, timer;
 
