@@ -23,6 +23,8 @@
   var id = wrap.getAttribute("data-youtube-id");
   var start = parseFloat(wrap.getAttribute("data-start")) || 0;
   var end = parseFloat(wrap.getAttribute("data-end")) || 0;
+  var DELAY_MS = 3000; // erst 3 Sekunden nur das Foto zeigen
+  var t0 = Date.now();
   var player, timer;
 
   function loop() {
@@ -40,15 +42,18 @@
       width: "100%",
       height: "100%",
       playerVars: {
-        autoplay: 1, mute: 1, controls: 0, disablekb: 1, fs: 0,
+        autoplay: 0, mute: 1, controls: 0, disablekb: 1, fs: 0,
         modestbranding: 1, rel: 0, playsinline: 1, iv_load_policy: 3,
         start: Math.floor(start), end: Math.ceil(end),
       },
       events: {
         onReady: function (e) {
           e.target.mute();
-          e.target.seekTo(start, true);
-          e.target.playVideo();
+          var wait = Math.max(0, DELAY_MS - (Date.now() - t0));
+          setTimeout(function () {
+            e.target.seekTo(start, true);
+            e.target.playVideo();
+          }, wait);
         },
         onStateChange: function (e) {
           if (e.data === YT.PlayerState.PLAYING) {
