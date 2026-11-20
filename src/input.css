@@ -84,3 +84,16 @@
     @apply block w-full rounded-xl border border-line bg-white px-4 py-3 text-sm text-ink placeholder:text-stone/60 focus:border-netec-500 focus:ring-4 focus:ring-netec-500/15 focus:outline-none;
   }
 }
+
+/* ---------- Einblenden beim Scrollen (siehe /js/reveal.js) ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .js [data-reveal] {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .js [data-reveal].is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
