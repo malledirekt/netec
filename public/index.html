@@ -110,8 +110,11 @@
             <a href="/mosquiteras/" class="btn btn-ghost">Ver todos los productos</a>
           </div>
 
-          <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            <a href="/mosquiteras/" data-reveal class="group flex flex-col overflow-hidden rounded-3xl border border-line bg-sand transition hover:-translate-y-1 hover:shadow-lg hover:shadow-netec-900/10">
+          <!-- Laufband: 6 Karten, 4 sichtbar, läuft langsam durch (Pause bei Hover/Fokus). Zweiter Satz nur für die Endlosschleife. -->
+          <div class="marquee mt-10" data-reveal>
+            <div class="marquee-track">
+              <div class="marquee-group">
+            <a href="/mosquiteras/"class="marquee-card group flex flex-col overflow-hidden rounded-3xl border border-line bg-sand transition hover:-translate-y-1 hover:shadow-lg hover:shadow-netec-900/10">
               <img src="/img/fotos/terraza.webp" alt="Pareja junto a una puerta corredera con mosquitera" class="aspect-[4/3] w-full object-cover" width="1200" height="800" loading="lazy" />
               <div class="flex flex-1 flex-col p-5">
                 <h3 class="font-semibold group-hover:text-netec-700">Mosquiteras</h3>
@@ -119,7 +122,7 @@
                 <span class="mt-3 text-sm font-semibold text-netec-700">Descubrir →</span>
               </div>
             </a>
-            <a href="/tipos-de-tejido/#polltec" data-reveal class="group flex flex-col overflow-hidden rounded-3xl border border-line bg-sand transition hover:-translate-y-1 hover:shadow-lg hover:shadow-netec-900/10">
+            <a href="/tipos-de-tejido/#polltec"class="marquee-card group flex flex-col overflow-hidden rounded-3xl border border-line bg-sand transition hover:-translate-y-1 hover:shadow-lg hover:shadow-netec-900/10">
               <img src="/img/fotos/antipolen.webp" alt="Dormitorio con la ventana abierta por la noche" class="aspect-[4/3] w-full object-cover" width="1400" height="848" loading="lazy" />
               <div class="flex flex-1 flex-col p-5">
                 <h3 class="font-semibold group-hover:text-netec-700">Antipolen</h3>
@@ -127,7 +130,7 @@
                 <span class="mt-3 text-sm font-semibold text-netec-700">Descubrir →</span>
               </div>
             </a>
-            <a href="/mosquiteras/#mascotas" data-reveal class="group flex flex-col overflow-hidden rounded-3xl border border-line bg-sand transition hover:-translate-y-1 hover:shadow-lg hover:shadow-netec-900/10">
+            <a href="/mosquiteras/#mascotas"class="marquee-card group flex flex-col overflow-hidden rounded-3xl border border-line bg-sand transition hover:-translate-y-1 hover:shadow-lg hover:shadow-netec-900/10">
               <img src="/img/fotos/gato.webp" alt="Gato pasando por una gatera integrada en la mosquitera" class="aspect-[4/3] w-full object-cover" width="1200" height="800" loading="lazy" />
               <div class="flex flex-1 flex-col p-5">
                 <h3 class="font-semibold group-hover:text-netec-700">Perros y gatos</h3>
@@ -135,7 +138,7 @@
                 <span class="mt-3 text-sm font-semibold text-netec-700">Descubrir →</span>
               </div>
             </a>
-            <a href="/mosquiteras/#tragaluces" data-reveal class="group flex flex-col overflow-hidden rounded-3xl border border-line bg-sand transition hover:-translate-y-1 hover:shadow-lg hover:shadow-netec-900/10">
+            <a href="/mosquiteras/#tragaluces"class="marquee-card group flex flex-col overflow-hidden rounded-3xl border border-line bg-sand transition hover:-translate-y-1 hover:shadow-lg hover:shadow-netec-900/10">
               <img src="/img/fotos/tragaluz.webp" alt="Cubierta para tragaluz sobre el césped" class="aspect-[4/3] w-full object-cover" width="1200" height="800" loading="lazy" />
               <div class="flex flex-1 flex-col p-5">
                 <h3 class="font-semibold group-hover:text-netec-700">Tragaluces</h3>
@@ -143,7 +146,7 @@
                 <span class="mt-3 text-sm font-semibold text-netec-700">Descubrir →</span>
               </div>
             </a>
-            <a href="/mosquiteras/#techo" data-reveal class="group flex flex-col overflow-hidden rounded-3xl border border-line bg-sand transition hover:-translate-y-1 hover:shadow-lg hover:shadow-netec-900/10">
+            <a href="/mosquiteras/#techo"class="marquee-card group flex flex-col overflow-hidden rounded-3xl border border-line bg-sand transition hover:-translate-y-1 hover:shadow-lg hover:shadow-netec-900/10">
               <img src="/img/fotos/ventana-techo.webp" alt="Hombre abriendo una ventana de techo con mosquitera" class="aspect-[4/3] w-full object-cover" width="1200" height="800" loading="lazy" />
               <div class="flex flex-1 flex-col p-5">
                 <h3 class="font-semibold group-hover:text-netec-700">Ventanas de techo</h3>
@@ -151,7 +154,7 @@
                 <span class="mt-3 text-sm font-semibold text-netec-700">Descubrir →</span>
               </div>
             </a>
-            <a href="/mosquiteras/#proteccion-solar" data-reveal class="group flex flex-col overflow-hidden rounded-3xl border border-line bg-sand transition hover:-translate-y-1 hover:shadow-lg hover:shadow-netec-900/10">
+            <a href="/mosquiteras/#proteccion-solar"class="marquee-card group flex flex-col overflow-hidden rounded-3xl border border-line bg-sand transition hover:-translate-y-1 hover:shadow-lg hover:shadow-netec-900/10">
               <!-- Platzhalter-Grafik (Plissee-Falten), bis ein Foto vorliegt -->
               <div class="relative aspect-[4/3] w-full overflow-hidden bg-[#efe3c8]" aria-hidden="true">
                 <div class="absolute -top-10 -right-10 size-36 rounded-full bg-[#f6c64e]/70 blur-xl"></div>
@@ -164,6 +167,63 @@
                 <span class="mt-3 text-sm font-semibold text-netec-700">Descubrir →</span>
               </div>
             </a>
+              </div>
+              <div class="marquee-group" aria-hidden="true">
+            <a tabindex="-1" href="/mosquiteras/"class="marquee-card group flex flex-col overflow-hidden rounded-3xl border border-line bg-sand transition hover:-translate-y-1 hover:shadow-lg hover:shadow-netec-900/10">
+              <img src="/img/fotos/terraza.webp" alt="Pareja junto a una puerta corredera con mosquitera" class="aspect-[4/3] w-full object-cover" width="1200" height="800" loading="lazy" />
+              <div class="flex flex-1 flex-col p-5">
+                <h3 class="font-semibold group-hover:text-netec-700">Mosquiteras</h3>
+                <p class="mt-1 flex-1 text-sm text-stone">Para ventanas y puertas: plisadas, enrollables, correderas y más.</p>
+                <span class="mt-3 text-sm font-semibold text-netec-700">Descubrir →</span>
+              </div>
+            </a>
+            <a tabindex="-1" href="/tipos-de-tejido/#polltec"class="marquee-card group flex flex-col overflow-hidden rounded-3xl border border-line bg-sand transition hover:-translate-y-1 hover:shadow-lg hover:shadow-netec-900/10">
+              <img src="/img/fotos/antipolen.webp" alt="Dormitorio con la ventana abierta por la noche" class="aspect-[4/3] w-full object-cover" width="1400" height="848" loading="lazy" />
+              <div class="flex flex-1 flex-col p-5">
+                <h3 class="font-semibold group-hover:text-netec-700">Antipolen</h3>
+                <p class="mt-1 flex-1 text-sm text-stone">Tejido Polltec para alérgicos, con sello ECARF.</p>
+                <span class="mt-3 text-sm font-semibold text-netec-700">Descubrir →</span>
+              </div>
+            </a>
+            <a tabindex="-1" href="/mosquiteras/#mascotas"class="marquee-card group flex flex-col overflow-hidden rounded-3xl border border-line bg-sand transition hover:-translate-y-1 hover:shadow-lg hover:shadow-netec-900/10">
+              <img src="/img/fotos/gato.webp" alt="Gato pasando por una gatera integrada en la mosquitera" class="aspect-[4/3] w-full object-cover" width="1200" height="800" loading="lazy" />
+              <div class="flex flex-1 flex-col p-5">
+                <h3 class="font-semibold group-hover:text-netec-700">Perros y gatos</h3>
+                <p class="mt-1 flex-1 text-sm text-stone">Gatera integrada y tejido reforzado.</p>
+                <span class="mt-3 text-sm font-semibold text-netec-700">Descubrir →</span>
+              </div>
+            </a>
+            <a tabindex="-1" href="/mosquiteras/#tragaluces"class="marquee-card group flex flex-col overflow-hidden rounded-3xl border border-line bg-sand transition hover:-translate-y-1 hover:shadow-lg hover:shadow-netec-900/10">
+              <img src="/img/fotos/tragaluz.webp" alt="Cubierta para tragaluz sobre el césped" class="aspect-[4/3] w-full object-cover" width="1200" height="800" loading="lazy" />
+              <div class="flex flex-1 flex-col p-5">
+                <h3 class="font-semibold group-hover:text-netec-700">Tragaluces</h3>
+                <p class="mt-1 flex-1 text-sm text-stone">Cubiertas contra insectos, hojas y ratones.</p>
+                <span class="mt-3 text-sm font-semibold text-netec-700">Descubrir →</span>
+              </div>
+            </a>
+            <a tabindex="-1" href="/mosquiteras/#techo"class="marquee-card group flex flex-col overflow-hidden rounded-3xl border border-line bg-sand transition hover:-translate-y-1 hover:shadow-lg hover:shadow-netec-900/10">
+              <img src="/img/fotos/ventana-techo.webp" alt="Hombre abriendo una ventana de techo con mosquitera" class="aspect-[4/3] w-full object-cover" width="1200" height="800" loading="lazy" />
+              <div class="flex flex-1 flex-col p-5">
+                <h3 class="font-semibold group-hover:text-netec-700">Ventanas de techo</h3>
+                <p class="mt-1 flex-1 text-sm text-stone">También con tejido de protección solar.</p>
+                <span class="mt-3 text-sm font-semibold text-netec-700">Descubrir →</span>
+              </div>
+            </a>
+            <a tabindex="-1" href="/mosquiteras/#proteccion-solar"class="marquee-card group flex flex-col overflow-hidden rounded-3xl border border-line bg-sand transition hover:-translate-y-1 hover:shadow-lg hover:shadow-netec-900/10">
+              <!-- Platzhalter-Grafik (Plissee-Falten), bis ein Foto vorliegt -->
+              <div class="relative aspect-[4/3] w-full overflow-hidden bg-[#efe3c8]" aria-hidden="true">
+                <div class="absolute -top-10 -right-10 size-36 rounded-full bg-[#f6c64e]/70 blur-xl"></div>
+                <div class="absolute inset-x-6 top-0 bottom-8 rounded-b-md bg-[repeating-linear-gradient(to_bottom,#f7f1e3_0_10px,#e2d4b4_10px_12px,#eadcbd_12px_20px,#d6c6a2_20px_22px)] shadow-md"></div>
+                <div class="absolute inset-x-6 bottom-8 h-2 rounded-b-md bg-ink/70"></div>
+              </div>
+              <div class="flex flex-1 flex-col p-5">
+                <h3 class="font-semibold group-hover:text-netec-700">Protección solar</h3>
+                <p class="mt-1 flex-1 text-sm text-stone">Plisados a medida contra el sol, el calor y las miradas.</p>
+                <span class="mt-3 text-sm font-semibold text-netec-700">Descubrir →</span>
+              </div>
+            </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
